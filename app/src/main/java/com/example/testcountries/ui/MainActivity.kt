@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.testcountries.R
 import com.example.testcountries.interfaces.ClickDetailsInterface
@@ -72,7 +73,6 @@ class MainActivity : AppCompatActivity(), ClickDetailsInterface {
         binding.editText.isEnabled = false
         binding.buttonLanguages.isEnabled = false
         binding.buttonTest.isEnabled = false
-        binding.recyclerCountry.isEnabled = false
     }
 
     private fun dismissLoading() {
@@ -80,7 +80,6 @@ class MainActivity : AppCompatActivity(), ClickDetailsInterface {
         binding.editText.isEnabled = true
         binding.buttonLanguages.isEnabled = true
         binding.buttonTest.isEnabled = true
-        binding.recyclerCountry.isEnabled = true
     }
 
     private fun getApiCountry() {
@@ -108,8 +107,10 @@ class MainActivity : AppCompatActivity(), ClickDetailsInterface {
     }
 
     override fun onClickDetails(countryDetails: CountryData) {
-        val intent = Intent(this, DetailsActivity::class.java)
-        intent.putExtra(DETAILS_OBJECT_TAG, countryDetails as Serializable)
-        startActivity(intent)
+        if (!binding.loading.isVisible) {
+            val intent = Intent(this, DetailsActivity::class.java)
+            intent.putExtra(DETAILS_OBJECT_TAG, countryDetails as Serializable)
+            startActivity(intent)
+        }
     }
 }
