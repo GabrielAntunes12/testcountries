@@ -24,7 +24,7 @@ class ListCountriesAdapter(var clickDetailsInterface: ClickDetailsInterface) : R
 
     fun addList(listCountriesAdd : List<CountryData>){
         listCountries.clear()
-        listCountries.addAll(listCountriesAdd)
+        listCountries.addAll(listCountriesAdd.sortedBy { it.name.common })
         notifyDataSetChanged()
     }
 }

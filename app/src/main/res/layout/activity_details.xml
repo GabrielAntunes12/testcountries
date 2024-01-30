@@ -48,10 +48,20 @@
         android:text="@string/area_title"
         android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/population"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="@+id/flag_image"
-        app:layout_constraintTop_toBottomOf="@+id/continent" />
+        app:layout_constraintTop_toBottomOf="@+id/container_continent" />
+
+    <TextView
+        android:id="@+id/container_area"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/area"
+        app:layout_constraintStart_toStartOf="@+id/area"
+        app:layout_constraintTop_toBottomOf="@id/area" />
 
     <TextView
         android:id="@+id/languages"
@@ -64,6 +74,16 @@
         app:layout_constraintTop_toTopOf="@+id/continent" />
 
     <TextView
+        android:id="@+id/container_language"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/languages"
+        app:layout_constraintStart_toStartOf="@+id/languages"
+        app:layout_constraintTop_toBottomOf="@id/languages" />
+
+    <TextView
         android:id="@+id/continent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -74,6 +94,16 @@
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="@+id/flag_image"
         app:layout_constraintTop_toBottomOf="@+id/flag_image" />
+
+    <TextView
+        android:id="@+id/container_continent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/continent"
+        app:layout_constraintStart_toStartOf="@+id/continent"
+        app:layout_constraintTop_toBottomOf="@id/continent" />
 
     <ImageView
         android:id="@+id/flag_image"
@@ -91,9 +121,21 @@
         android:layout_height="wrap_content"
         android:text="@string/population_title"
         android:textColor="@color/white"
+        app:layout_constraintHorizontal_bias="0"
         app:layout_constraintEnd_toEndOf="@+id/flag_image"
-        app:layout_constraintStart_toEndOf="@+id/area"
+        app:layout_constraintStart_toStartOf="@+id/languages"
         app:layout_constraintTop_toTopOf="@+id/area" />
+
+
+    <TextView
+        android:id="@+id/container_population"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/population"
+        app:layout_constraintStart_toStartOf="@+id/population"
+        app:layout_constraintTop_toBottomOf="@id/population" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

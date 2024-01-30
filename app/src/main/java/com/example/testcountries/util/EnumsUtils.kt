@@ -2,6 +2,7 @@ package com.example.testcountries.util
 
 
 const val PORTUGUESE_TAG = "por"
+const val DETAILS_OBJECT_TAG = "details_tag"
 object EnumsUtils {
     enum class Languages(val languageName : String,val translatedName : String){
         ENGLISH("english", "Inglês"),

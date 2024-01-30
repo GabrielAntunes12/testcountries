@@ -4,4 +4,7 @@
     <string name="languages_title">Idiomas Falados:</string>
     <string name="area_title">Aréa Territorial:</string>
     <string name="population_title">População:</string>
+    <string name="area_filled">%1$s km²</string>
+    <string name="choose_language_title">Escolha um idioma</string>
+    <string name="generic_error">Algo deu errado, tente novamente.</string>
 </resources>

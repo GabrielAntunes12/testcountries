@@ -7,10 +7,12 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.testcountries.R
 import com.example.testcountries.interfaces.ClickDetailsInterface
 import com.example.testcountries.databinding.ActivityMainBinding
 import com.example.testcountries.model.CountryData
 import com.example.testcountries.ui.adapter.ListCountriesAdapter
+import com.example.testcountries.util.DETAILS_OBJECT_TAG
 import com.example.testcountries.util.EnumsUtils
 import com.example.testcountries.viewmodels.MainActivityViewModel
 import com.example.testcountries.viewmodels.StateScreens
@@ -49,7 +51,7 @@ class MainActivity : AppCompatActivity(), ClickDetailsInterface {
 
     private fun showDialogCustom() {
         val builder = AlertDialog.Builder(this)
-        builder.setTitle("Escolha um idioma")
+        builder.setTitle(getString(R.string.choose_language_title))
 
         builder.setItems(EnumsUtils.buildOptions()) { dialog, position ->
             getApiCountryByLanguage(EnumsUtils.Languages.values()[position].languageName)
@@ -93,13 +95,13 @@ class MainActivity : AppCompatActivity(), ClickDetailsInterface {
     }
 
     private fun showError() {
-        Toast.makeText(this, "GENERIC ERROR", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, getString(R.string.generic_error), Toast.LENGTH_SHORT).show()
         dismissLoading()
     }
 
     override fun onClickDetails(countryDetails: CountryData) {
         val intent = Intent(this, DetailsActivity::class.java)
-        intent.putExtra("details", countryDetails as Serializable)
+        intent.putExtra(DETAILS_OBJECT_TAG, countryDetails as Serializable)
         startActivity(intent)
     }
 }
