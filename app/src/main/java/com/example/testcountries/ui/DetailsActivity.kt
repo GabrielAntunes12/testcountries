@@ -23,7 +23,14 @@ class DetailsActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         val detailsObject = intent.extras?.get(DETAILS_OBJECT_TAG) as CountryData
+        setupBackButton()
         fillInfos(detailsObject)
+    }
+
+    private fun setupBackButton() {
+        binding.backButton.setOnClickListener {
+            finish()
+        }
     }
 
     private fun fillInfos(detailsObject: CountryData) {
