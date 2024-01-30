@@ -69,10 +69,18 @@ class MainActivity : AppCompatActivity(), ClickDetailsInterface {
 
     private fun showLoading() {
         binding.loading.visibility = View.VISIBLE
+        binding.editText.isEnabled = false
+        binding.buttonLanguages.isEnabled = false
+        binding.buttonTest.isEnabled = false
+        binding.recyclerCountry.isEnabled = false
     }
 
     private fun dismissLoading() {
         binding.loading.visibility = View.GONE
+        binding.editText.isEnabled = true
+        binding.buttonLanguages.isEnabled = true
+        binding.buttonTest.isEnabled = true
+        binding.recyclerCountry.isEnabled = true
     }
 
     private fun getApiCountry() {
