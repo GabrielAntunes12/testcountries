@@ -1,5 +1,7 @@
 package com.example.testcountries
 
+import com.example.testcountries.util.EnumsUtils
+import com.example.testcountries.util.TextUtils.removeAccents
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -11,7 +13,8 @@ import org.junit.Assert.*
  */
 class ExampleUnitTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun testTextUtilRemoveAccents() {
+        val stringTest = "áéíóú"
+        assertEquals("aeiou", stringTest.removeAccents())
     }
 }
