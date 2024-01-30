@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.testcountries.model.CountryData
 import com.example.testcountries.repository.MainActivityRepository
+import com.example.testcountries.util.PORTUGUESE_TAG
 import com.example.testcountries.util.TextUtils.removeAccents
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -46,7 +47,7 @@ class MainActivityViewModel(private val repository: MainActivityRepository) : Vi
 
     private fun treatmentName(list: List<CountryData>): List<CountryData> {
         val treatList: List<CountryData> = list.filter {
-            it.translations["por"]?.let { nativeDetails ->
+            it.translations[PORTUGUESE_TAG]?.let { nativeDetails ->
                 nativeDetails.common.removeAccents().lowercase()
                     .contains(actualSearch.removeAccents().lowercase().replace("\\s".toRegex(), ""))
             } == true

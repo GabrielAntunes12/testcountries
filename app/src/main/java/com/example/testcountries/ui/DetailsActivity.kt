@@ -7,6 +7,7 @@ import com.bumptech.glide.Glide
 import com.example.testcountries.databinding.ActivityDetailsBinding
 import com.example.testcountries.databinding.ActivityMainBinding
 import com.example.testcountries.model.CountryData
+import com.example.testcountries.util.PORTUGUESE_TAG
 import java.util.*
 
 class DetailsActivity : AppCompatActivity() {
@@ -23,8 +24,8 @@ class DetailsActivity : AppCompatActivity() {
     }
 
     private fun fillInfos(detailsObject: CountryData) {
-        binding.commonName.text = detailsObject.translations["por"]?.common
-        binding.officialName.text = detailsObject.translations["por"]?.official
+        binding.commonName.text = detailsObject.translations[PORTUGUESE_TAG]?.common
+        binding.officialName.text = detailsObject.translations[PORTUGUESE_TAG]?.official
         binding.area.text = detailsObject.area.toString() + " km"
         var stringContinents = ""
         detailsObject.continents.map {

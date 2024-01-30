@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_gradient_app"
     tools:context=".ui.DetailsActivity">
 
     <TextView
@@ -13,7 +14,7 @@
         android:layout_marginTop="32dp"
         android:text="NAME"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/official_name"
@@ -30,7 +31,7 @@
         android:layout_marginTop="12dp"
         android:text="OFICIAL NAME"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/flag_image"
@@ -43,11 +44,12 @@
         android:id="@+id/area"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="area"
         android:layout_marginTop="64dp"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        android:text="@string/area_title"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/population"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="@+id/flag_image"
         app:layout_constraintTop_toBottomOf="@+id/continent" />
 
@@ -55,7 +57,8 @@
         android:id="@+id/languages"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Languages"
+        android:text="@string/languages_title"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/flag_image"
         app:layout_constraintStart_toEndOf="@+id/continent"
         app:layout_constraintTop_toTopOf="@+id/continent" />
@@ -65,7 +68,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Continent"
+        android:text="@string/continent"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/languages"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="@+id/flag_image"
@@ -85,7 +89,8 @@
         android:id="@+id/population"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="population"
+        android:text="@string/population_title"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/flag_image"
         app:layout_constraintStart_toEndOf="@+id/area"
         app:layout_constraintTop_toTopOf="@+id/area" />

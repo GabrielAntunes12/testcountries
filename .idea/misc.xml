@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/TestCountries/app/src/main/res/drawable/background_gradient_app.xml" value="0.33055555555555555" />
+        <entry key="..\:/TestCountries/app/src/main/res/drawable/rounded_background.xml" value="0.33055555555555555" />
+        <entry key="..\:/TestCountries/app/src/main/res/drawable/rounded_green_background.xml" value="0.33055555555555555" />
         <entry key="..\:/TestCountries/app/src/main/res/layout/activity_details.xml" value="0.33" />
         <entry key="..\:/TestCountries/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/TestCountries/app/src/main/res/layout/item_list_country.xml" value="0.33" />
